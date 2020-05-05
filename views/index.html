@@ -1,0 +1,59 @@
+
+<html>
+  <body style="display: flex;">
+    <div style="display: flex;">
+      <canvas id="area" style="background-color: black; margin-right: 20px;" width="800" height="800""></canvas>
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: column;">
+          <label>tickLimit</label><input id="tickLimit" />
+          <label>maxNoChangeTicks</label><input id="maxNoChangeTicks" />
+          <label>entityLimit</label><input id="entityLimit" />
+          <label>initialInfected</label><input id="initialInfected" />
+          <label>hospitalCapacity</label><input id="hospitalCapacity" />
+          <label>infectionRate</label><input id="infectionRate" />
+          <label>recoveringRate</label><input id="recoveringRate" />
+          <label>timeToCure</label><input id="timeToCure" />
+          <label>socialDistancingRate</label><input id="socialDistancingRate" />
+          <label>mobilityRate</label><input id="mobilityRate" />
+          <label>areaOfInfluence</label><input id="areaOfInfluence" />
+          <label>confinedArea</label><input id="confinedArea" />
+          <label>entitySize</label><input id="entitySize" />
+          <div><label>show Influence Area</label><input id="showInfluenceArea" type="checkbox"/></div>
+          <div><label>show id</label><input id="showId" type="checkbox"/></div>
+          <div><label>sleep per tick</label>&nbsp;<span id="currSleep"></span></div><input id="sleep" type="range" min="0" max="2000" step="10"/>
+          <div>
+            <button id="start">start</button>
+            <button id="restart">restart</button>
+            <button id="stop">stop</button>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex;margin-top: 20px;">
+            <div style="width: 20px; height: 20px; background-color: #ded81c; margin-right: 5px"></div>
+            <label>Dead</label>&nbsp;<span id="numDead">0</span>
+          </div>
+          <div style="display: flex;">
+            <div style="width: 20px; height: 20px; background-color: #ff3c00; margin-right: 5px"></div>
+            <label>Infected</label>&nbsp;<span id="numInfected">0</span>
+          </div>
+          <div style="display: flex;">
+            <div style="width: 20px; height: 20px; background-color: #1c83de; margin-right: 5px;"></div>
+            <label>Cured</label>&nbsp;<span id="numCured">0</span>
+          </div>
+          <div style="display: flex;">
+            <div style="width: 20px; height: 20px; background-color: #22de1c; margin-right: 5px"></div>
+            <label>Social Distancing</label>&nbsp;<span id="numSocialDistancing">0</span>
+          </div>
+          <div style="display: flex;">
+            <div style="width: 20px; height: 20px; background-color: #9e5cea; margin-right: 5px"></div>
+            <label>Only living</label>&nbsp;<span id="numOnlyliving">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <link rel="stylesheet" href="./lib/uPlot.min.css">
+  <script src="./lib/uPlot.iife.min.js"></script>
+  <script src="./bundle.js"></script>
+</html>
